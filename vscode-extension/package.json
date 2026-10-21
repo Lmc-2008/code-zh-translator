@@ -1,0 +1,93 @@
+{
+  "name": "code-zh-translator",
+  "displayName": "代码中文翻译",
+  "description": "在代码的下一行插入中文注释，或侧边预览整段代码的中文说明（离线词库，支持 HTML / CSS / JavaScript / SQL / Python / Java 等）。",
+  "version": "0.2.0",
+  "publisher": "codezh",
+  "engines": {
+    "vscode": "^1.70.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Other"
+  ],
+  "keywords": [
+    "中文",
+    "翻译",
+    "注释",
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "SQL",
+    "learning"
+  ],
+  "activationEvents": [
+    "onCommand:codeZhTranslator.insertComments",
+    "onCommand:codeZhTranslator.preview",
+    "onCommand:codeZhTranslator.removeComments"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "codeZhTranslator.insertComments",
+        "title": "插入中文注释（下一行）",
+        "category": "代码中文翻译"
+      },
+      {
+        "command": "codeZhTranslator.preview",
+        "title": "侧边预览中文说明",
+        "category": "代码中文翻译"
+      },
+      {
+        "command": "codeZhTranslator.removeComments",
+        "title": "移除中文注释",
+        "category": "代码中文翻译"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "command": "codeZhTranslator.insertComments",
+          "group": "navigation@1"
+        },
+        {
+          "command": "codeZhTranslator.preview",
+          "group": "navigation@2"
+        },
+        {
+          "command": "codeZhTranslator.removeComments",
+          "group": "navigation@3"
+        }
+      ]
+    },
+    "keybindings": [
+      {
+        "command": "codeZhTranslator.insertComments",
+        "key": "ctrl+alt+t",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "codeZhTranslator.preview",
+        "key": "ctrl+alt+p",
+        "when": "editorTextFocus"
+      }
+    ],
+    "configuration": {
+      "title": "代码中文翻译",
+      "properties": {
+        "codeZhTranslator.marker": {
+          "type": "string",
+          "default": "译文：",
+          "description": "插入注释的标记，用于识别由本扩展生成的行。"
+        },
+        "codeZhTranslator.showStatusBar": {
+          "type": "boolean",
+          "default": true,
+          "description": "是否在状态栏显示「译」按钮。"
+        }
+      }
+    }
+  },
+  "license": "MIT"
+}

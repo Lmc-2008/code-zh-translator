@@ -1,0 +1,12 @@
+{
+  "name": "zh-code-translator",
+  "private": true,
+  "version": "0.2.0",
+  "type": "commonjs",
+  "description": "代码中文翻译：给英文代码自动加中文注释的 VS Code 扩展",
+  "license": "MIT",
+  "scripts": {
+    "test": "node tests/test-translator.js && node tests/test-insert-core.js && node tests/test-extension.js",
+    "build": "powershell -ExecutionPolicy Bypass -File tools/build-vsix.ps1"
+  }
+}
