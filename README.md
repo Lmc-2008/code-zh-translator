@@ -1,8 +1,14 @@
 # 代码中文翻译（Code Chinese Translator）
 
+[![license](https://img.shields.io/github/license/Lmc-2008/code-zh-translator)](LICENSE)
+[![VS Code](https://img.shields.io/badge/VS%20Code-%5E1.70.0-2e75b6)](https://code.visualstudio.com/)
+[![tests](https://img.shields.io/github/actions/workflow/status/Lmc-2008/code-zh-translator/test.yml?branch=main&label=tests)](https://github.com/Lmc-2008/code-zh-translator/actions)
+
 > 一个给英文代码自动加中文注释的 VS Code 扩展：离线、免费、开源。
 >
 > A VS Code extension that inserts Chinese comments under each line of code — fully offline and open source.
+
+![demo](docs/demo.png)
 
 支持 **HTML / CSS / JavaScript / TypeScript / SQL / Python / Java / C / C++ / C# / Go / Rust** 等语言。
 
@@ -53,6 +59,8 @@ const add = (a, b) => a + b;
 ## 安装
 
 ### VSIX 安装（推荐）
+
+从 [Releases](https://github.com/Lmc-2008/code-zh-translator/releases/latest) 下载 `code-zh-translator-0.2.0.vsix`，然后：
 
 ```bash
 code --install-extension code-zh-translator-0.2.0.vsix
@@ -122,3 +130,16 @@ powershell -ExecutionPolicy Bypass -File tools/build-vsix.ps1
 ## License
 
 [MIT](LICENSE)
+
+---
+
+## English
+
+**Code Chinese Translator** is a VS Code extension that inserts Chinese comments under each line of code — fully offline, no network, no code upload.
+
+- Supports HTML / CSS / JavaScript / TypeScript / SQL / Python / Java / C / C++ / C# / Go / Rust
+- Commands: `Ctrl+Alt+T` insert comments, `Ctrl+Alt+P` side-by-side preview
+- Recognizes `<script>` / `<style>` blocks inside HTML and picks the right comment syntax
+- Local glossary + rule engine, MIT licensed
+
+Install from [Releases](https://github.com/Lmc-2008/code-zh-translator/releases/latest), or build with `tools/build-vsix.ps1`.

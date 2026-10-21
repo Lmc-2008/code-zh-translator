@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>代码中文翻译 · 示例</title>
+<style>
+  :root { color-scheme: dark; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; min-height: 100vh; display: flex; align-items: center; justify-content: center;
+    background: radial-gradient(1200px 600px at 20% 0%, #1b2a4a 0%, #0b0f17 55%, #070a10 100%);
+    font-family: "Microsoft YaHei UI", "Segoe UI", sans-serif;
+  }
+  .window {
+    width: 1180px; border-radius: 14px; overflow: hidden;
+    background: #0d1117; border: 1px solid #2a3342;
+    box-shadow: 0 30px 80px rgba(0,0,0,.65), 0 0 0 1px rgba(88,166,255,.08);
+  }
+  .titlebar {
+    height: 44px; display: flex; align-items: center; gap: 8px; padding: 0 16px;
+    background: #161b22; border-bottom: 1px solid #21262d;
+  }
+  .dot { width: 11px; height: 11px; border-radius: 50%; }
+  .red { background: #ff5f57; } .yellow { background: #febc2e; } .green { background: #28c840; }
+  .title { margin-left: 12px; color: #8b949e; font-size: 13px; }
+  .tabs { display: flex; gap: 2px; margin-left: auto; }
+  .tab { padding: 6px 14px; font-size: 12px; color: #8b949e; background: transparent; border-radius: 6px 6px 0 0; }
+  .tab.active { color: #e6edf3; background: #0d1117; box-shadow: inset 0 -2px 0 #2e75b6; }
+  .body { display: flex; }
+  .gutter {
+    padding: 18px 10px 18px 18px; text-align: right; color: #484f58; font: 13px/24px Consolas, monospace;
+    user-select: none; border-right: 1px solid #21262d; background: #0d1117;
+  }
+  pre {
+    margin: 0; padding: 18px 24px; font: 13px/24px Consolas, "Microsoft YaHei UI", monospace;
+    color: #c9d1d9; white-space: pre; overflow: hidden; flex: 1;
+  }
+  .tag { color: #7ee787; }
+  .attr { color: #79c0ff; }
+  .str { color: #a5d6ff; }
+  .cmt { color: #3fb950; }
+  .js { color: #ff7b72; }
+  .str2 { color: #a5d6ff; }
+  .badge {
+    position: absolute; top: 26px; left: 40px; color: #8b949e; font-size: 12px;
+  }
+  .brand { position: absolute; top: 20px; right: 40px; color: #2e75b6; font-size: 13px; font-weight: 700; }
+</style>
+</head>
+<body>
+  <div class="brand">代码中文翻译 · v0.2.0</div>
+  <div class="window">
+    <div class="titlebar">
+      <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+      <span class="title">index.html — 代码中文翻译</span>
+      <div class="tabs">
+        <span class="tab active">index.html</span>
+        <span class="tab">style.css</span>
+        <span class="tab">app.js</span>
+      </div>
+    </div>
+    <div class="body">
+      <div class="gutter">1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21</div>
+      <pre><span class="tag">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;html</span> <span class="attr">lang</span>=<span class="str">"zh-CN"</span><span class="tag">&gt;</span>
+<span class="tag">&lt;head&gt;</span>
+  <span class="tag">&lt;meta</span> <span class="attr">charset</span>=<span class="str">"UTF-8"</span><span class="tag">&gt;</span>
+<span class="cmt">&lt;!-- 译文：HTML 元素 meta（元信息），属性 字符集 为 UTF-8 --&gt;</span>
+  <span class="tag">&lt;title&gt;</span>技能大赛报名<span class="tag">&lt;/title&gt;</span>
+<span class="cmt">&lt;!-- 译文：HTML 元素 title（页面标题），内容：技能大赛报名 --&gt;</span>
+<span class="tag">&lt;/head&gt;</span>
+<span class="tag">&lt;body&gt;</span>
+  <span class="tag">&lt;form</span> <span class="attr">id</span>=<span class="str">"signup"</span> <span class="attr">action</span>=<span class="str">"/api/signup"</span> <span class="attr">method</span>=<span class="str">"post"</span><span class="tag">&gt;</span>
+<span class="cmt">&lt;!-- 译文：HTML 元素 form（表单），属性 标识 为 signup、属性 提交地址 为 /api/signup、属性 请求方法 为 post --&gt;</span>
+    <span class="tag">&lt;button</span> <span class="attr">type</span>=<span class="str">"submit"</span><span class="tag">&gt;</span>提交报名<span class="tag">&lt;/button&gt;</span>
+<span class="cmt">&lt;!-- 译文：HTML 元素 button（按钮），属性 类型 为 submit，内容：提交报名 --&gt;</span>
+  <span class="tag">&lt;/form&gt;</span>
+  <span class="tag">&lt;script&gt;</span>
+    <span class="js">const</span> form = document.<span class="js">querySelector</span>(<span class="str2">'#signup'</span>);
+<span class="cmt">// 译文：查找页面元素：按选择器「#signup」，赋值给 form</span>
+    form.<span class="js">addEventListener</span>(<span class="str2">'submit'</span>, handleSubmit);
+<span class="cmt">// 译文：为 form 添加事件监听：submit</span>
+  <span class="tag">&lt;/script&gt;</span>
+<span class="tag">&lt;/body&gt;</span>
+<span class="tag">&lt;/html&gt;</span></pre>
+    </div>
+  </div>
+</body>
+</html>
